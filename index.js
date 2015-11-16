@@ -1,4 +1,4 @@
 /**
- * Exports expand main library
+ * Exports solve main library
  */
-module.exports = require('./lib/expand');
+module.exports = require('./lib');
