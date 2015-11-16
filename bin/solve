@@ -67,7 +67,7 @@ if(context) {
 
 if(!context) context = process.env;
 
-require('../lib/expand')({
+require('../lib')({
     engine: argv.engine,
     template: template,
     context: context
