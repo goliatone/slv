@@ -1,8 +1,8 @@
 {
-  "name": "expand",
-  "description": "CLI template expander",
+  "name": "solve",
+  "description": "CLI template solver",
   "version": "0.1.0",
-  "homepage": "https://github.com/goliatone/expand",
+  "homepage": "https://github.com/goliatone/solve",
   "author": {
     "name": "goliatone",
     "email": "hello@goliatone.com",
@@ -10,17 +10,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/goliatone/expand.git"
+    "url": "git://github.com/goliatone/solve.git"
   },
   "bugs": {
-    "url": "https://github.com/goliatone/expand/issues"
+    "url": "https://github.com/goliatone/solve/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/goliatone/expand/blob/master/LICENSE-MIT"
+      "url": "https://github.com/goliatone/solve/blob/master/LICENSE-MIT"
     }
   ],
+  "bin":"bin/solve",
   "main": "index",
   "engines": {
     "node": ">= 0.10.0"
