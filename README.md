@@ -13,6 +13,11 @@ Install the module with: `npm install expand -g`
 expand examples/template.html -c examples/context.json
 ```
 
+Use with `envset`:
+```
+envset production -- expand Dockerfile
+```
+
 ## Documentation
 _(Coming soon)_
 

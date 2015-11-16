@@ -1,0 +1,10 @@
+; Name used to export current environment name
+exportEnvironment= NODE_ENV
+
+[production]
+NODE_USERNAME=goliatone
+NODE_PASSWORD=admin
+
+[development]
+NODE_USERNAME=goliatone
+NODE_PASSWORD=tHi$i$Ha3d
