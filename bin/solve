@@ -6,7 +6,6 @@ var pkg = require('../package.json');
 
 updateNotifier({pkg: pkg}).notify();
 
-process.env.DEBUG='*';
 
 require('yargonaut')
   .style('cyan')
