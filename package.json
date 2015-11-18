@@ -1,8 +1,8 @@
 {
-  "name": "solve",
+  "name": "slv",
   "description": "CLI template solver",
   "version": "0.1.0",
-  "homepage": "https://github.com/goliatone/solve",
+  "homepage": "https://github.com/goliatone/slv",
   "author": {
     "name": "goliatone",
     "email": "hello@goliatone.com",
@@ -10,18 +10,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/goliatone/solve.git"
+    "url": "git://github.com/goliatone/slv.git"
   },
   "bugs": {
-    "url": "https://github.com/goliatone/solve/issues"
+    "url": "https://github.com/goliatone/slv/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/goliatone/solve/blob/master/LICENSE-MIT"
+      "url": "https://github.com/goliatone/slv/blob/master/LICENSE-MIT"
     }
   ],
-  "bin":"bin/solve",
+  "bin":"bin/slv",
   "main": "index",
   "engines": {
     "node": ">= 0.10.0"
