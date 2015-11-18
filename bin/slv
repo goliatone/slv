@@ -33,7 +33,7 @@ var argv = yargs.usage('Usage: $0 <template> [options]')
         type: 'boolean'
     })
     .version( function() {
-		return 'cicerone version: ' + require( '../package' ).version;
+		return 'slv version: ' + require( '../package' ).version;
 	})
     .help('h')
     .alias('h', 'help')
