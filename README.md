@@ -1,21 +1,21 @@
-# solve
+# slv
 
 CLI template solver
 
 ## Getting Started
-Install the module with: `npm install solve -g`
+Install the module with: `npm install slv -g`
 
 ```
- NODE_ENV=local NODE_USERNAME=peperone NODE_PASSWORD=shh solve examples/Dockerfile
+ NODE_ENV=local NODE_USERNAME=peperone NODE_PASSWORD=shh slv examples/Dockerfile
 ```
 
 ```
-solve examples/template.html -c examples/context.json
+slv examples/template.html -c examples/context.json
 ```
 
 Use with `envset`:
 ```
-envset production -- solve Dockerfile
+envset production -- slv Dockerfile
 ```
 
 ## Documentation
