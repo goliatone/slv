@@ -1,21 +1,21 @@
-# expand
+# slv
 
-CLI template expander
+CLI template solver
 
 ## Getting Started
-Install the module with: `npm install expand -g`
+Install the module with: `npm install slv -g`
 
 ```
- NODE_ENV=local NODE_USERNAME=peperone NODE_PASSWORD=shh expand examples/Dockerfile
+ NODE_ENV=local NODE_USERNAME=peperone NODE_PASSWORD=shh slv examples/Dockerfile
 ```
 
 ```
-expand examples/template.html -c examples/context.json
+slv examples/template.html -c examples/context.json
 ```
 
 Use with `envset`:
 ```
-envset production -- expand Dockerfile
+envset production -- slv Dockerfile
 ```
 
 ## Documentation

@@ -7,14 +7,14 @@ var fixture = path.resolve.bind(path, __dirname, 'fixtures');
 
 sinon.assert.expose(assert, { prefix: '' });
 
-var expand = require('..');
+var solve = require('..');
 
 
-describe('expand', function(){
+describe('solve', function(){
 
     describe('constructor', function(){
         it('should provide a DEFAULTS object', function(){
-            assert.isObject(expand.DEFAULTS);
+            assert.isObject(solve.DEFAULTS);
         });
     });
 });

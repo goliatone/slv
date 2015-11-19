@@ -1,14 +1,21 @@
 #!/usr/bin/env node
 "use strict";
 
+var updateNotifier = require('update-notifier');
+var pkg = require('../package.json');
+
+updateNotifier({pkg: pkg}).notify();
+
+
 require('yargonaut')
   .style('cyan')
   .helpStyle('green.bold')
   .style('yellow', 'required');
 
+var debug = require('debug')('expand'),
+    yargs = require('yargs');
 
-var yargs = require('yargs');
-var argv = yargs.usage('Usage: $0 <command> [options]')
+var argv = yargs.usage('Usage: $0 <template> [options]')
     .option('c', {
         alias: 'context',
         describe: 'Path to context JSON file',
@@ -20,30 +27,46 @@ var argv = yargs.usage('Usage: $0 <command> [options]')
         type: 'string',
         default: 'swig'
     })
+    .option('d', {
+        alias: 'debug',
+        describe: 'Output debug information',
+        type: 'boolean'
+    })
     .version( function() {
-		return 'cicerone version: ' + require( '../package' ).version;
+		return 'slv version: ' + require( '../package' ).version;
 	})
     .help('h')
     .alias('h', 'help')
-    .epilog('MIT License 2015')
+    .epilog('MIT License 2015, goliatone')
     .argv;
 
 //This should be a valid tempalte file
 var template = argv._[0];
 
+if(!template){
+    console.log('ERROR: Template argument not provided. You need to specify a template.\n');
+    yargs.showHelp();
+    process.exit();
+}
+
 var context = argv.context;
-if(context){
+
+if(context) {
     try {
         var resolve = require('path').resolve;
         context = resolve(context);
+        debug('trying to load context file: %s', context);
         context = require('fs').readFileSync(context, 'utf-8');
         context = JSON.parse(context);
-    } catch(e) {console.log(e)}
+    } catch(e) {
+        debug('Error parsing context file.');
+        debug(e);
+    }
 }
 
 if(!context) context = process.env;
 
-require('../lib/expand')({
+require('../lib')({
     engine: argv.engine,
     template: template,
     context: context
