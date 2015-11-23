@@ -21,6 +21,10 @@ envset production -- slv Dockerfile
 ## Documentation
 _(Coming soon)_
 
+## TODO
+* Take raw strings from CLI
+* take context from CLI
+
 ## Examples
 _(Coming soon)_
 
