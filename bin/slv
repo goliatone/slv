@@ -48,7 +48,7 @@ if(!template){
     process.exit();
 }
 
-var debug = argv.debug ? require('debug')('expand') : function(){};
+var debug = argv.debug ? console.log : function(){};
 
 var context = argv.context;
 
