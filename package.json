@@ -1,7 +1,7 @@
 {
   "name": "slv",
   "description": "CLI template solver",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "homepage": "https://github.com/goliatone/slv",
   "author": {
     "name": "goliatone",
