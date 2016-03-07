@@ -12,8 +12,7 @@ require('yargonaut')
   .helpStyle('green.bold')
   .style('yellow', 'required');
 
-var debug = require('debug')('expand'),
-    yargs = require('yargs');
+var yargs = require('yargs');
 
 var argv = yargs.usage('Usage: $0 <template> [options]')
     .option('c', {
@@ -49,6 +48,8 @@ if(!template){
     process.exit();
 }
 
+var debug = argv.debug ? console.log : function(){};
+
 var context = argv.context;
 
 if(context) {
@@ -69,5 +70,6 @@ if(!context) context = process.env;
 require('../lib')({
     engine: argv.engine,
     template: template,
-    context: context
+    context: context,
+    debug: argv.debug
 });
