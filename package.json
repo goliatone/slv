@@ -1,7 +1,7 @@
 {
   "name": "slv",
   "description": "CLI template solver",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "homepage": "https://github.com/goliatone/slv",
   "author": {
     "name": "goliatone",
@@ -44,5 +44,10 @@
     "sinon": "^1.14.1",
     "mocha": "^2.2.4"
   },
-  "keywords": ["cli", "terminal", "template", "environment"]
+  "keywords": [
+    "cli",
+    "terminal",
+    "template",
+    "environment"
+  ]
 }
