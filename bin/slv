@@ -3,6 +3,7 @@
 
 var updateNotifier = require('update-notifier');
 var pkg = require('../package.json');
+var extend = require('gextend');
 
 updateNotifier({pkg: pkg}).notify();
 
@@ -50,12 +51,11 @@ if(!template){
 
 var debug = argv.debug ? console.log : function(){};
 
-var context = argv.context;
+var context = {};
 
-if(context) {
+if(argv.context) {
     try {
-        var resolve = require('path').resolve;
-        context = resolve(context);
+        context = require('path').resolve(argv.context);
         debug('trying to load context file: %s', context);
         context = require('fs').readFileSync(context, 'utf-8');
         context = JSON.parse(context);
@@ -65,7 +65,11 @@ if(context) {
     }
 }
 
-if(!context) context = process.env;
+/*
+ * Process ENV overrides any variables stored
+ * in context json file.
+ */
+context = extend({}, context, process.env);
 
 require('../lib')({
     engine: argv.engine,
